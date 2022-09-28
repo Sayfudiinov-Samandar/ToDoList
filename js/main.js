@@ -7,6 +7,7 @@ let todonumber=0
 
 
 console.log(toArray );
+
 elForm.addEventListener("submit",function(evt){
     evt.preventDefault();
     let inputValue=elFormInput.value;
