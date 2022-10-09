@@ -110,13 +110,12 @@ function makeList(array, element) {
     
 }
 
-elSearchForm.addEventListener("keyup",function(){
+elSearchForm.addEventListener("keyup", function(){
     let searchInputValue=elSearchInput.value.toLowerCase()
     let searcharray=toArray.filter(item => {
-        return item.name.toLowerCase().includes(searchInputValue)
-    })
+       return item.name.toLowerCase().includes(searchInputValue)
+    });
     makeList(searcharray, resulTodo)
-
 })
 
  
@@ -203,12 +202,15 @@ resulTodo.addEventListener("dblclick",function(evt) {
     }
 
 })
+
 function audioClick(element) {
     element.play()
 }
+
 new Sortable(resulTodo,{
     animation: 150,
     ghostClass: `blue-background-class`
 })
+
 numbersList(toArray)
 makeList(toArray,resulTodo);
